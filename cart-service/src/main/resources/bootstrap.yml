@@ -1,6 +1,6 @@
 spring:
   application:
-    name: gateway-service
+    name: cart-service
   cloud:
     consul:
       host: localhost
@@ -16,3 +16,10 @@ spring:
         data-key: application.yml
         format: YAML
         failFast: false
+    vault:
+      token: s.NB3vbrpn0mk5fxeEpZt73RHB
+      scheme: http
+      kv:
+        backend: secret
+        enabled: true
+      enabled: true
