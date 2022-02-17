@@ -6,10 +6,7 @@ services:
     container_name: vault
     restart: always
     volumes:
-      - ./data/vault/config:/vault/config
-      - ./data/vault/policies:/vault/policies
-      - ./data/vault/data:/vault/data
-      - ./data/vault/logs:/vault/logs
+      - ./data/vault:/vault
     environment:
       - VAULT_ADDR=http://0.0.0.0:8200
     command: vault server -config=/vault/config/vault-config.json
